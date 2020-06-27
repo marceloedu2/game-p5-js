@@ -2,18 +2,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Game p5</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D@0.7/p5.collide2d.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
-    <audio id="audio-game" loop>
-      <source src="./src/assets/sounds/gameSound.mp3"  type="audio/mpeg">
-    </audio>
-
     <!-- SCRIPTS -->
     <script src="./src/scripts/utils/animation.js"></script>
+    <script src="./src/scripts/utils/matrices.js"></script>
 
     <script src="./src/scripts/games/panorama.js"></script>
     <script src="./src/scripts/games/opponent.js"></script>

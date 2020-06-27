@@ -4,17 +4,17 @@ class Animation {
     image,
     personageX,
     personageY,
-    width,
-    height,
+    personageWidth,
+    personageHeight,
     widthSprite,
     heightSprite
   ) {
     this.matriz = matriz
     this.image = image
+    this.personageWidth = personageWidth
+    this.personageHeight = personageHeight
     this.personageX = personageX
-    this.personageY = personageY
-    this.width = width
-    this.height = height
+    this.personageY = height - this.personageHeight - personageY
     this.widthSprite = widthSprite
     this.heightSprite = heightSprite
     this.currentFrame = 0
@@ -25,8 +25,8 @@ class Animation {
       this.image,
       this.personageX,
       this.personageY,
-      this.width,
-      this.height,
+      this.personageWidth,
+      this.personageHeight,
       this.matriz[this.currentFrame][0],
       this.matriz[this.currentFrame][1],
       this.widthSprite,
