@@ -12,6 +12,7 @@ let opponentTroll;
 let opponentFlyngDroplet;
 
 let opponents = [];
+let currentOpponents = 0;
 
 let points;
 
@@ -67,20 +68,20 @@ function setup() {
     400,
     400,
     20,
-    800
+    100
   );
 
   const opponentFlyngDroplet = new Opponent(
     matrizOpponentFlyngDroplet,
     imageOpponentFlyngDroplet,
     width,
-    400,
+    300,
     120,
     120,
     200,
     150,
     25,
-    2000
+    100
   );
 
   opponents.push(opponentDroplet);
@@ -106,15 +107,25 @@ function draw() {
   player.show();
   player.applyGravity();
 
-  opponents.forEach((opponent) => {
-    opponent.show();
-    opponent.move();
-    if (player.collision(opponent)) {
-      image(imageGameOver, width / 2 - 200, height / 3);
-      //damageSound.play();
-      //backgroundSound.stop();
-      //loseSound.play()
-      noLoop();
+  const opponent = opponents[currentOpponents];
+  const showOpponent = opponent.personageX < -opponent.personageWidth;
+
+  opponent.show();
+  opponent.move();
+
+  if (showOpponent) {
+    currentOpponents++;
+    if (currentOpponents > 2) {
+      currentOpponents = 0;
     }
-  });
+    opponent.speed = random(5, 30);
+  }
+
+  if (player.collision(opponents[currentOpponents])) {
+    image(imageGameOver, width / 2 - 200, height / 3);
+    damageSound.play();
+    backgroundSound.stop();
+    //loseSound.play()
+    noLoop();
+  }
 }

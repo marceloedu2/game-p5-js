@@ -66,8 +66,8 @@ class Player extends Animation {
       this.personageHeight * precision,
       opponent.personageX,
       opponent.personageY,
-      opponent.personageWidth * precision,
-      opponent.personageHeight * precision
+      opponent.personageWidth,
+      opponent.personageHeight
     );
   }
 }
