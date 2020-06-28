@@ -9,15 +9,15 @@ class Animation {
     widthSprite,
     heightSprite
   ) {
-    this.matriz = matriz
-    this.image = image
-    this.personageWidth = personageWidth
-    this.personageHeight = personageHeight
-    this.personageX = personageX
-    this.personageY = height - this.personageHeight - personageY
-    this.widthSprite = widthSprite
-    this.heightSprite = heightSprite
-    this.currentFrame = 0
+    this.matriz = matriz;
+    this.image = image;
+    this.personageWidth = personageWidth;
+    this.personageHeight = personageHeight;
+    this.personageX = personageX;
+    this.personageY = height - this.personageHeight - personageY;
+    this.widthSprite = widthSprite;
+    this.heightSprite = heightSprite;
+    this.currentFrame = 0;
   }
 
   show() {
@@ -31,13 +31,13 @@ class Animation {
       this.matriz[this.currentFrame][1],
       this.widthSprite,
       this.heightSprite
-    )
-    this.animation()
+    );
+    this.animation();
   }
 
   animation() {
     this.currentFrame >= this.matriz.length - 1
       ? (this.currentFrame = 0)
-      : this.currentFrame++
+      : this.currentFrame++;
   }
 }

@@ -8,8 +8,7 @@ class Opponent extends Animation {
     personageHeight,
     widthSprite,
     heightSprite,
-    speed,
-    delay
+    speed
   ) {
     super(
       matriz,
@@ -22,13 +21,16 @@ class Opponent extends Animation {
       heightSprite
     );
     this.speed = speed;
-    this.delay = delay;
-    this.personageX = width + this.delay;
+
+    this.personageX = width;
   }
 
   move() {
     this.personageX = this.personageX - this.speed;
-    this.personageX < -this.personageHeight - this.delay &&
-      (this.personageX = width);
+    //this.personageX < -this.personageHeight && (this.personageX = width);
+  }
+
+  reShow() {
+    this.personageX = width;
   }
 }

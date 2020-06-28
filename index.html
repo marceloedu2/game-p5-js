@@ -3,38 +3,30 @@
     <meta charset="utf-8" />
     <title>Game p5</title>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D@0.7/p5.collide2d.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
     <!-- SCRIPTS -->
-    <script src="./src/scripts/utils/animation.js"></script>
-    <script src="./src/scripts/utils/matrices.js"></script>
+    <script src="./src/scripts/variables.js"></script>
+    <script src="./src/scripts/preload.js"></script>
+    <script src="./src/scripts/matrices.js"></script>
 
-    <script src="./src/scripts/games/points.js"></script>
-    <script src="./src/scripts/games/panorama.js"></script>
-    <script src="./src/scripts/games/opponent.js"></script>
-    <script src="./src/scripts/games/player.js"></script>
+    <script src="./src/components/animation.js"></script>
+    <script src="./src/components/button.js"></script>
+    <script src="./src/components/points.js"></script>
+    <script src="./src/components/lifePoints.js"></script>
+    <script src="./src/components/panorama.js"></script>
+    <script src="./src/components/player.js"></script>
+    <script src="./src/components/opponent.js"></script>
+
+    <script src="./src/pages/game.js"></script>
+    <script src="./src/pages/starter.js"></script>
+
 
     <script src="./src/index.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-    <meta charset="utf-8" />
-
-  </head>
-  <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <script src="scripts/jogo/personagem.js"></script>
-    <script src="scripts/jogo/cenario.js"></script>
-    <script src="../src/index.js"></script>
-  </body>
-</html> -->

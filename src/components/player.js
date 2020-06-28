@@ -25,6 +25,7 @@ class Player extends Animation {
     this.gravity = 3;
     this.jumpHeight = -45;
     this.numberJump = 0;
+    this.invulnerable = false;
   }
 
   jump() {
@@ -44,7 +45,17 @@ class Player extends Animation {
     }
   }
 
+  isInvulnerable() {
+    this.invulnerable = true;
+    setTimeout(() => {
+      this.invulnerable = false;
+    }, 1000);
+  }
+
   collision(opponent) {
+    if (this.invulnerable) {
+      return false;
+    }
     const precision = 0.7;
     // noFill();
     // rect(
