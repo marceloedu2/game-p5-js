@@ -18,28 +18,47 @@ class Player extends Animation {
       personageHeight,
       widthSprite,
       heightSprite
-    )
-    this.personageYInitial = height - personageHeight - personageY
-    this.personageY = this.personageYInitial
-    this.jumpSpeed = 0
-    this.gravity = 2
+    );
+    this.personageYInitial = height - personageHeight - personageY;
+    this.personageY = this.personageYInitial;
+    this.jumpSpeed = 0;
+    this.gravity = 3;
+    this.jumpHeight = -45;
+    this.numberJump = 0;
   }
 
   jump() {
-    this.jumpSpeed = -30
+    if (this.numberJump < 2) {
+      jumpSound.play();
+      this.jumpSpeed = this.jumpHeight;
+      this.numberJump++;
+    }
   }
 
   applyGravity() {
-    this.personageY = this.personageY + this.jumpSpeed
-    this.jumpSpeed = this.jumpSpeed + this.gravity
+    this.personageY = this.personageY + this.jumpSpeed;
+    this.jumpSpeed = this.jumpSpeed + this.gravity;
     if (this.personageY > this.personageYInitial) {
-      this.personageY = this.personageYInitial
-      jump = 0
+      this.personageY = this.personageYInitial;
+      this.numberJump = 0;
     }
   }
 
   collision(opponent) {
-    const precision = 0.7
+    const precision = 0.7;
+    // noFill();
+    // rect(
+    //   this.personageX,
+    //   this.personageY,
+    //   this.personageWidth,
+    //   this.personageHeight
+    // );
+    // rect(
+    //   opponent.personageX + 130,
+    //   opponent.personageY + 30,
+    //   opponent.personageWidth * precision,
+    //   opponent.personageHeight * precision
+    // );
     return collideRectRect(
       this.personageX,
       this.personageY,
@@ -49,6 +68,6 @@ class Player extends Animation {
       opponent.personageY,
       opponent.personageWidth * precision,
       opponent.personageHeight * precision
-    )
+    );
   }
 }
