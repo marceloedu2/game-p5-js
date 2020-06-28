@@ -106,7 +106,7 @@ class Game {
       if (life.lives <= 0) {
         image(imageGameOver, width / 2 - 200, height / 3);
         backgroundSound.stop();
-        loseSound.play();
+        //loseSound.play();
         noLoop();
       }
     }
