@@ -8,7 +8,7 @@ function setup() {
     starter,
     game,
   };
-  ButtonStarter = new Button("game", "Start", width / 2, height / 2);
+  ButtonStarter = new Button("game", "Ajudar", width / 2, height / 2 + 100);
 }
 function keyPressed() {
   game.keyPressed(key);

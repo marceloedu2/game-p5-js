@@ -56,29 +56,31 @@ class Player extends Animation {
     if (this.invulnerable) {
       return false;
     }
-    const precision = 0.7;
-    noFill();
-    rect(
-      this.personageX,
-      this.personageY,
-      this.personageWidth * precision,
-      this.personageHeight * precision
-    );
-    rect(
-      opponent.personageX,
-      opponent.personageY,
-      opponent.personageWidth * precision,
-      opponent.personageHeight * precision
-    );
+    const precision = 0.8;
+
+    // noFill();
+    // rect(
+    //   this.personageX,
+    //   this.personageY,
+    //   this.personageWidth,
+    //   this.personageHeight
+    // );
+    // rect(
+    //   opponent.personageX,
+    //   opponent.personageY,
+    //   opponent.personageWidth,
+    //   opponent.personageHeight
+    // );
+
     return collideRectRect(
       this.personageX,
       this.personageY,
-      this.personageWidth * precision,
-      this.personageHeight * precision,
+      this.personageWidth,
+      this.personageHeight,
       opponent.personageX,
       opponent.personageY,
-      opponent.personageWidth * precision,
-      opponent.personageHeight * precision
+      opponent.personageWidth,
+      opponent.personageHeight
     );
   }
 }

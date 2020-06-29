@@ -29,7 +29,7 @@ class Game {
     );
     life = new LifePoints(ribbon.configs.maxLife, ribbon.configs.initialLife);
     points = new Points();
-    //backgroundSound.loop();
+    backgroundSound.loop();
 
     const opponentWalkFemale = new Opponent(
       matrizOpponentWalkFemale,
