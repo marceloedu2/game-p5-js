@@ -23,7 +23,7 @@ class Player extends Animation {
     this.personageY = this.personageYInitial;
     this.jumpSpeed = 0;
     this.gravity = 3;
-    this.jumpHeight = -45;
+    this.jumpHeight = -30;
     this.numberJump = 0;
     this.invulnerable = false;
   }
@@ -61,20 +61,20 @@ class Player extends Animation {
     // rect(
     //   this.personageX,
     //   this.personageY,
-    //   this.personageWidth,
-    //   this.personageHeight
+    //   this.personageWidth * precision,
+    //   this.personageHeight * precision
     // );
     // rect(
-    //   opponent.personageX + 130,
-    //   opponent.personageY + 30,
-    //   opponent.personageWidth * precision,
-    //   opponent.personageHeight * precision
+    //   opponent.personageX,
+    //   opponent.personageY,
+    //   opponent.personageWidth,
+    //   opponent.personageHeight
     // );
     return collideRectRect(
       this.personageX,
       this.personageY,
-      this.personageWidth * precision,
-      this.personageHeight * precision,
+      this.personageWidth,
+      this.personageHeight,
       opponent.personageX,
       opponent.personageY,
       opponent.personageWidth,

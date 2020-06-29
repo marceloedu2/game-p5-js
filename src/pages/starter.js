@@ -15,7 +15,7 @@ class Starter {
     textAlign(CENTER);
     text("As aventuras de", width / 2, height / 3);
     textSize(100);
-    text("Hipsta", width / 2, height / 3 + 90);
+    text("Kza", width / 2, height / 3 + 90);
   }
 
   _button() {
