@@ -1,9 +1,9 @@
 function preload() {
   ribbon = loadJSON("./src/configs/ribbon.json");
   backgroundSound = loadSound("./src/assets/sounds/backgroundSound.mp3");
-  jumpSound = loadSound("./src/assets/sounds/jumpSound.ogg");
-  damageSound = loadSound("./src/assets/sounds/damageSound.ogg");
-  loseSound = loadSound("./src/assets/sounds/loseSound.mp3");
+  jumpSound = loadSound("./src/assets/sounds/jumpSound.mp3");
+  damageSound = loadSound("./src/assets/sounds/damageSound.mp3");
+  loseSound = loadSound("./src/assets/sounds/gameOver.ogg");
 
   fontHomeScreen = loadFont("./src/assets/fonts/textFont.otf");
 

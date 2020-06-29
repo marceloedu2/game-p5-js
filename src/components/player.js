@@ -57,28 +57,28 @@ class Player extends Animation {
       return false;
     }
     const precision = 0.7;
-    // noFill();
-    // rect(
-    //   this.personageX,
-    //   this.personageY,
-    //   this.personageWidth * precision,
-    //   this.personageHeight * precision
-    // );
-    // rect(
-    //   opponent.personageX,
-    //   opponent.personageY,
-    //   opponent.personageWidth,
-    //   opponent.personageHeight
-    // );
+    noFill();
+    rect(
+      this.personageX,
+      this.personageY,
+      this.personageWidth * precision,
+      this.personageHeight * precision
+    );
+    rect(
+      opponent.personageX,
+      opponent.personageY,
+      opponent.personageWidth * precision,
+      opponent.personageHeight * precision
+    );
     return collideRectRect(
       this.personageX,
       this.personageY,
-      this.personageWidth,
-      this.personageHeight,
+      this.personageWidth * precision,
+      this.personageHeight * precision,
       opponent.personageX,
       opponent.personageY,
-      opponent.personageWidth,
-      opponent.personageHeight
+      opponent.personageWidth * precision,
+      opponent.personageHeight * precision
     );
   }
 }

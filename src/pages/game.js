@@ -29,7 +29,7 @@ class Game {
     );
     life = new LifePoints(ribbon.configs.maxLife, ribbon.configs.initialLife);
     points = new Points();
-    backgroundSound.loop();
+    //backgroundSound.loop();
 
     const opponentWalkFemale = new Opponent(
       matrizOpponentWalkFemale,
@@ -143,7 +143,7 @@ class Game {
       if (life.lives <= 0) {
         image(imageGameOver, width / 2 - 200, height / 3);
         backgroundSound.stop();
-        //loseSound.play();
+        loseSound.play();
         noLoop();
       }
     }
